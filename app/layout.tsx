@@ -1,19 +1,5 @@
 import type { Metadata } from 'next'
-import { Kanit, Inter } from 'next/font/google'
 import './globals.css'
-
-const kanit = Kanit({
-  subsets: ['thai', 'latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-kanit',
-  display: 'swap',
-})
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'Money Tracker App - บันทึกรายรับรายจ่ายอย่างมืออาชีพ',
@@ -26,7 +12,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="th" className={`${kanit.variable} ${inter.variable} font-sans`}>
+    <html lang="th">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen flex flex-col antialiased bg-slate-50 text-slate-900">
         {children}
       </body>

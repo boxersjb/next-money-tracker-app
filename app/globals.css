@@ -1,15 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-inter), var(--font-kanit), sans-serif;
+  --font-sans: 'Inter', 'Kanit', sans-serif;
 }
 
 @layer base {
-  html, body {
-    font-family: var(--font-inter), var(--font-kanit), sans-serif;
-  }
   body {
     background-color: #f8fafc;
     color: #0f172a;
+    font-family: 'Inter', 'Kanit', sans-serif;
   }
 }
